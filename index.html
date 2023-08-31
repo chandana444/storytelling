@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Storytelling App</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<!-- <div class="background-image"></div> -->
+	<h1>Storytelling App</h1>
+
+	<!-- Form for user input -->
+	<form id="story-form">
+		<label for="mood-select">Mood:</label>
+		<select id="mood-select" name="mood">
+			<option value="happy">Happy</option>
+			<option value="sad">Sad</option>
+			<option value="scary">Scary</option>
+		</select>
+
+		<label for="genre-select">Genre:</label>
+		<select id="genre-select" name="genre">
+			<option value="fantasy">Fantasy</option>
+			<option value="science-fiction">Science Fiction</option>
+			<option value="horror">Horror</option>
+			<option value="romance">Romance</option>
+			<option value="mystery">Mystery</option>
+			<option value="comedy">Comedy</option>
+		</select>
+
+		<label for="character-input">Main character:</label>
+		<input type="text" id="character-input" name="character">
+
+		<label for="setting-input">Setting:</label>
+		<input type="text" id="setting-input" name="setting">
+
+		<button type="submit">Generate Story</button>
+	</form>
+
+	<!-- Container for displaying the generated story -->
+	<div id="story-container">
+		<p id="story-text"></p>
+		<audio id="audio"></audio>
+	</div>
+
+	<!-- Load the OpenAI API script -->
+	<script src="https://cdn.openai.com/sdk/js/api.js"></script>
+
+	<!-- Load your own script for handling the form submission -->
+	<script src="script.js"></script>
+</body>
+</html>
